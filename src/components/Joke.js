@@ -2,23 +2,26 @@ import React from 'react'
 import "./Joke.css"
 
 function Joke (props) {
-    debugger
+
     function ClassName() {
         let ids =[]
-        ids.push(props.id)
+        ids.push(props.content.id)
         for (let i=0; i < ids.length; i++){
+                debugger
             if (ids[i]%2 == 0){
-                props.ClassName = "jokeRed"
+                return "jokeRed"
             }
             else{
-                props.ClassName = "jokeBlue"
+                debugger
+                return "jokeBlue"
             }
         }
     }
+
     return (
         <div className={ClassName()}>
-            <p>Questions: What do you call a boomerang that won’t come back?</p>
-            <p>Answer: A stick.</p>
+            <p>Questions: {props.content.questions}</p>
+            <p>Answer: {props.content.answer}</p>
         </div>
     )
 }
