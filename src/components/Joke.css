@@ -1,0 +1,17 @@
+.jokeRed{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    background-color: red;
+    width: 500px;
+}
+
+.jokeBlue{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    background-color: dodgerblue;
+    width: 500px;
+}
