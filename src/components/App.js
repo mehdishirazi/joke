@@ -32,7 +32,7 @@ function App() {
             <Joke content={
                     {
                         id:"4",
-                        questions:"",
+                        questions:"What time is it when the clock strikes 13?",
                         answer:"Time to get a new clock"
                     }
                 }
