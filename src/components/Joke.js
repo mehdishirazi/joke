@@ -4,18 +4,12 @@ import "./Joke.css"
 function Joke (props) {
 
     function ClassName() {
-        let ids =[]
-        ids.push(props.content.id)
-        for (let i=0; i < ids.length; i++){
-                debugger
-            if (ids[i]%2 == 0){
+        let ids = props.content.id
+            if (ids%2 == 0){
                 return "jokeRed"
-            }
-            else{
-                debugger
+            }else{
                 return "jokeBlue"
             }
-        }
     }
 
     return (
