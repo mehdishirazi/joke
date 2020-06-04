@@ -2,9 +2,10 @@ import React from 'react'
 import "./Joke.css"
 
 function Joke (props) {
-
+    console.log(props[0])
+    debugger
     function ClassName() {
-        let ids = props.content.id
+        let ids = props.id
             if (ids%2 == 0){
                 return "jokeRed"
             }else{
@@ -12,10 +13,11 @@ function Joke (props) {
             }
     }
 
+    const mehdi =props.id
     return (
         <div className={ClassName()}>
-            <p>Questions: {props.content.questions}</p>
-            <p>Answer: {props.content.answer}</p>
+            { mehdi > 0 &&  <p id="question">Questions: {props.questions}</p>}
+            <p>Answer: {props.answer}</p>
         </div>
     )
 }

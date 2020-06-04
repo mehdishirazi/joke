@@ -1,42 +1,20 @@
 import React from 'react'
 import Joke from "./Joke"
 import "./App.css"
+import jokeData from "./JokeData"
+    
 
 function App() {
+    debugger
+    let mehdi = jokeData
+    console.log(jokeData)
+    const jokeComponents = mehdi.map(item => <Joke questions={mehdi.questions} answer={mehdi.answer}/>)
+    debugger
+    console.log(jokeComponents)
+
     return (
         <div className="App">
-            <Joke content={
-                    {
-                        id:"1", 
-                        questions:"What do you call a boomerang that won’t come back?",
-                        answer:"A stick"
-                    }
-                }
-            />
-            <Joke content={
-                    {
-                        id:"2",
-                        questions:"What does a cloud wear under his raincoat?",
-                        answer:"Thunderwear"
-                    }
-                }
-            />
-            <Joke content={
-                    {
-                        id:"3",
-                        questions:"Two pickles fell out of a jar onto the floor. What did one say to the other?",
-                        answer:"Dill with it"
-                    }
-                }
-            />
-            <Joke content={
-                    {
-                        id:"4",
-                        questions:"What time is it when the clock strikes 13?",
-                        answer:"Time to get a new clock"
-                    }
-                }
-            />
+            {jokeComponents}
         </div>
     )
 }
