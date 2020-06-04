@@ -5,12 +5,7 @@ import jokeData from "./JokeData"
     
 
 function App() {
-    debugger
-    let mehdi = jokeData
-    console.log(jokeData)
-    const jokeComponents = mehdi.map(item => <Joke questions={mehdi.questions} answer={mehdi.answer}/>)
-    debugger
-    console.log(jokeComponents)
+    const jokeComponents = jokeData.map(item => <Joke id={item.id} questions={item.questions} answer={item.answer}/>)
 
     return (
         <div className="App">
